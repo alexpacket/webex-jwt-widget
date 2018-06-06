@@ -1,0 +1,3 @@
+<div data-toggle="ciscospark-space"
+     data-guest-token="{{token}}"
+     data-to-person-email="dstaudt@cisco.com" />
