@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
     "exp": Math.round(Date.now()/1000) + 3600
   }
 
-  const decoded = Buffer.from(proess.env.WEBEX_TEAMS_ISSUER_SECRET, 'base64');
+  const decoded = Buffer.from(process.env.WEBEX_TEAMS_ISSUER_SECRET, 'base64');
 
   const jwtToken = jwt.sign(payload, decoded, { algorithm: 'HS256', noTimestamp: true });
 
