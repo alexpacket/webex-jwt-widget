@@ -3,10 +3,6 @@ if(window == window.top)
 
 var palettes;
 
-function openVideoWindow() {
-    window.open('widget_jwt?user='+document.getElementById('loginUsername').value,'','height=500,width=500');
-}
-
 var QueryString = function () {
       // This function is anonymous, is executed immediately and
       // the return value is assigned to QueryString!
