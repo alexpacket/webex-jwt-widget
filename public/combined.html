@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>Together Widget</title>
+  <link rel="stylesheet" href="https://code.s4d.io/widget-recents/production/main.css">
+  <link rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
+</head>
+
+<body>
+
+  <div>
+    <div id="recents" style="width: 300px; height: 500px; float:left" />
+  </div>
+  <div>
+    <div id="space" style="width: 750px; height: 500px; margin-left: 300px" />
+  </div>
+
+  <script src="https://code.s4d.io/widget-recents/production/bundle.js"></script>
+  <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
+
+  <script>
+    var recents = document.getElementById('recents');
+    var space = document.getElementById('space');
+
+    var myToken = 'CHANGEME';
+
+    // Init a new recents widget
+    ciscospark.widget(recents).recentsWidget({
+      accessToken: myToken
+    });
+
+    ciscospark.widget(recents).on("rooms:selected", function (event) {
+      var selectedRoom = event.data.id;
+      console.log("room " + selectedRoom + " was selected");
+
+      // var space = document.getElementById('space');
+
+      try {
+        ciscospark.widget(space).remove().then(function (removed) {
+          if (removed) {
+            console.log('removed!');
+            createSpaceWidget(selectedRoom);
+          }
+          else{
+            createSpaceWidget(selectedRoom)
+          }
+        })
+      } catch (err) {
+        console.log(err);
+       }
+
+    });
+
+    function createSpaceWidget(id) {
+      console.log('here');
+      // Init a new widget
+      ciscospark.widget(space).spaceWidget({
+        accessToken: myToken,
+        spaceId: id
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>
