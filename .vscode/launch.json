@@ -9,7 +9,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/bin/www"
+            "program": "${workspaceFolder}/bin/www",
+            "env": {
+                "WEBEX_TEAMS_ISSUER_ID": "CHANGEME",
+                "WEBEX_TEAMS_ISSUER_SECRET": "CHANGEME"
+            }
         }
     ]
 }

@@ -9,11 +9,11 @@ router.get('/', function(req, res, next) {
   const payload = {
     "sub": encodeURIComponent(req.query.user),
     "name": req.query.user,
-    "iss": 'Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wNWMxMWNlZS05YzhiLTQ5ZmQtOGRiNy01ZGYwMjM5MTQyZTk',
+    "iss": process.env.WEBEX_TEAMS_ISSUER_ID,
     "exp": Math.round(Date.now()/1000) + 3600
   }
 
-  const decoded = Buffer.from('gDh973cmYxAGvqnN6GiX70TnGJtklE6lRkrRJaOJw2U=', 'base64');
+  const decoded = Buffer.from(proess.env.WEBEX_TEAMS_ISSUER_SECRET, 'base64');
 
   const jwtToken = jwt.sign(payload, decoded, { algorithm: 'HS256', noTimestamp: true });
 
