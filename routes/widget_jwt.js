@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 
 /* GET widget window content. */
 router.get('/', function(req, res, next) {
+  
   const payload = {
     "sub": encodeURIComponent(req.query.user),
     "name": req.query.user,
