@@ -3,41 +3,8 @@ if(window == window.top)
 
 var palettes;
 
-function openVideoPanel() {
-    jsPanel.create({ 
-        container: document.getElementsByTagName('body'),
-        id: 'webex-teams-widget',
-        content: '<div id="widget-div" style="text-align: center;margin: auto">--Loading--</div>',
-        panelSize: {
-            width: 450,
-            height: 450
-        },
-        position: 'left-bottom',
-        theme: 'none',
-        headerControls: 'closeonly',
-        headerTitle: '',
-        onbeforeclose: function(panel){
-            console.log('here');
-            if(confirm('End Session?')){
-                ciscospark.widget(document.getElementById('widget-div')).remove();
-                return true
-            }
-            else{
-                return false
-            }
-        }
-     });
-     fetch('widget_jwt?user='+document.getElementById('loginUsername').value)
-        .then(function(response){
-            response.json()
-                .then( function(data){
-                    console.log(data);
-                    ciscospark.widget(document.getElementById('widget-div')).spaceWidget({
-                        accessToken: data.token,
-                        toPersonEmail: 'dstaudt@cisco.com'
-                      })
-                })
-        })
+function openVideoWindow() {
+    window.open('widget_jwt?user='+document.getElementById('loginUsername').value,'','height=500,width=500');
 }
 
 var QueryString = function () {
