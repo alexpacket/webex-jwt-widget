@@ -4,4 +4,5 @@
      data-start-call="true"
      data-initial-activity="meet"
      data-guest-token="{{guestToken}}"
-     data-to-person-email="{{toPersonEmail}}" />
+     data-destination-id="{{toPersonEmail}}"
+     data-destination-type="email" />
