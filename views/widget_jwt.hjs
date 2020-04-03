@@ -1,8 +1,9 @@
 <link  rel="stylesheet" href="https://code.s4d.io/widget-space/production/main.css">
 <script src="https://code.s4d.io/widget-space/production/bundle.js"></script>
-<div data-toggle="ciscospark-space"
-     data-start-call="true"
-     data-initial-activity="meet"
-     data-guest-token="{{guestToken}}"
-     data-destination-id="{{toPersonEmail}}"
-     data-destination-type="email" />
+<div class="webexteams-widget"
+    data-toggle="webex-space"
+    data-start-call="true"
+    data-initial-activity="meet"
+    data-guest-token="{{guestToken}}"
+    data-destination-id="{{toPersonEmail}}"
+    data-destination-type="email" />
