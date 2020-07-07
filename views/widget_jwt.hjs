@@ -6,4 +6,4 @@
     data-initial-activity="meet"
     data-guest-token="{{guestToken}}"
     data-destination-id="{{toPersonEmail}}"
-    data-destination-type="email" />
+    data-destination-type="email" ></div>
