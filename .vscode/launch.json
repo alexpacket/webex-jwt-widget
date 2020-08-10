@@ -10,9 +10,9 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/bin/www",
             "env": {
-                "WEBEX_TEAMS_ISSUER_ID": "CHANGEME",
-                "WEBEX_TEAMS_ISSUER_SECRET": "CHANGEME",
-                "TO_PERSON_EMAIL": "CHANGEME"
+                "WEBEX_TEAMS_ISSUER_ID": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi9jOGRmMTlmYS0yOTdmLTRmYmMtYjk3Yi0yOTA1NTk5NzkzOTI",
+                "WEBEX_TEAMS_ISSUER_SECRET": "cOgM2e+gzLavdxNKCAbY4BxLn9mIrBSKsjKPXcWfM5w=",
+                "TO_PERSON_EMAIL": "alcortes@cisco.com"
             }
         }
     ]
